@@ -21,12 +21,11 @@ Future<void> setup() async {
   sl.registerLazySingleton<CharacterRepository>(
       () => CharacterRepositoryImpl(sl()));
 
-  sl.registerLazySingleton<GetCharactersUseCase>(
-      () => GetCharactersUseCase(sl()));
+  sl.registerLazySingleton<GetCharactersUseCase>(() => GetCharactersUseCase());
   sl.registerLazySingleton<SearchCharactersUseCase>(
-      () => SearchCharactersUseCase(sl()));
+      () => SearchCharactersUseCase());
   sl.registerLazySingleton<ToggleFavoriteUseCase>(
-      () => ToggleFavoriteUseCase(sl()));
+      () => ToggleFavoriteUseCase());
 
   sl.registerFactory<LoginCubit>(() => LoginCubit());
   sl.registerFactory<SplashCubit>(() => SplashCubit(

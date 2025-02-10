@@ -1,12 +1,11 @@
 import 'package:dartz/dartz.dart';
+import 'package:get_it/get_it.dart';
 import 'package:rick_and_morty/core/errors/failure.dart';
 import '../../../core/storage/local_storage.dart';
 import '../entities/entities.dart';
 
 class ToggleFavoriteUseCase {
-  final LocalStorage _localStorage;
-
-  ToggleFavoriteUseCase(this._localStorage);
+  final LocalStorage _localStorage = GetIt.instance<LocalStorage>();
 
   Future<Either<Failure, List<int>>> call(
       Character character, List<int> currentFavorites) async {
