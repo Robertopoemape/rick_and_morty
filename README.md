@@ -8,6 +8,12 @@ Application developed in Flutter with multi-user order taking and with main conf
   * Password: 123
 - Structure base example Cubit with Clean_Arquitecture
 
+<div class="row">
+  <img src="assets/splash.png" width="250" and height="480">
+  <img src="assets/login.png" width="250" and height="480">
+  <img src="assets/home.png" width="250" and height="480">
+  <img src="assets/detail.png" width="250" and height="480">
+</div>
 
 # Aditional Complements
 
