@@ -24,7 +24,6 @@ Application developed in Flutter with multi-user order taking and with main conf
 - Class Routes.
 - Dependencies with Cubit.
 - Hive.
-- Logger.
 - Equatable.
 - bloc.
 - get_it.
