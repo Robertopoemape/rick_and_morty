@@ -15,8 +15,8 @@ Application developed in Flutter with multi-user order taking and with main conf
   <img src="assets/detail.png" width="250" and height="480">
 </div>
 
-# Aditional Complements
-- version flutter 3.27.3
+# Version flutter
+- 3.27.3
 
 # Aditional Complements
 
