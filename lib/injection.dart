@@ -28,7 +28,7 @@ Future<void> setup() async {
   sl.registerLazySingleton<ToggleFavoriteUseCase>(
       () => ToggleFavoriteUseCase(sl()));
 
-  sl.registerFactory<LoginCubit>(() => LoginCubit(sl()));
+  sl.registerFactory<LoginCubit>(() => LoginCubit());
   sl.registerFactory<SplashCubit>(() => SplashCubit(
         sl(),
       ));

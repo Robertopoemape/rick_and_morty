@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 import '../../../../../core/storage/local_storage.dart';
 import 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  final LocalStorage localStorage;
+  final LocalStorage localStorage = GetIt.instance<LocalStorage>();
   final TextEditingController controllerEmail = TextEditingController();
   final TextEditingController controllerPassword = TextEditingController();
 
-  LoginCubit(this.localStorage) : super(LoginInitial());
+  LoginCubit() : super(LoginInitial());
 
   Future<void> login(String email, String password) async {
     // Evita múltiples emisiones de Loginloading
