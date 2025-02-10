@@ -16,6 +16,9 @@ Application developed in Flutter with multi-user order taking and with main conf
 </div>
 
 # Aditional Complements
+- version flutter 3.27.3
+
+# Aditional Complements
 
 - Dio Class global.
 - Methods.
