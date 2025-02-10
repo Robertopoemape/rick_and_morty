@@ -19,7 +19,7 @@ Future<void> setup() async {
   sl.registerLazySingleton<LocalStorage>(() => LocalStorage());
 
   sl.registerLazySingleton<CharacterRepository>(
-      () => CharacterRepositoryImpl(sl()));
+      () => CharacterRepositoryImpl());
 
   sl.registerLazySingleton<GetCharactersUseCase>(() => GetCharactersUseCase());
   sl.registerLazySingleton<SearchCharactersUseCase>(
@@ -28,9 +28,7 @@ Future<void> setup() async {
       () => ToggleFavoriteUseCase());
 
   sl.registerFactory<LoginCubit>(() => LoginCubit());
-  sl.registerFactory<SplashCubit>(() => SplashCubit(
-        sl(),
-      ));
+  sl.registerFactory<SplashCubit>(() => SplashCubit());
   sl.registerFactory<HomeCubit>(() => HomeCubit());
   sl.registerFactory<DetailCubit>(() => DetailCubit());
 }

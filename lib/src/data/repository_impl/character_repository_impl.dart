@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:get_it/get_it.dart';
 import 'package:rick_and_morty/core/errors/failure.dart';
 
 import '../../../core/decorator/decorator.dart';
@@ -8,9 +9,7 @@ import 'package:dio/dio.dart';
 import '../models/rick_and_morty_response.dart';
 
 class CharacterRepositoryImpl implements CharacterRepository {
-  final ApiService _apiService;
-
-  CharacterRepositoryImpl(this._apiService);
+  final ApiService _apiService = GetIt.instance<ApiService>();
 
   @override
   Future<Either<Failure, RickAndMortyResponseModel>> getCharacters(

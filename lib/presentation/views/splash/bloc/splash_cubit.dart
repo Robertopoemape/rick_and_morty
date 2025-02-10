@@ -1,11 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 import 'package:rick_and_morty/presentation/views/splash/bloc/splash_state.dart';
 import 'package:rick_and_morty/core/storage/local_storage.dart';
 
 class SplashCubit extends Cubit<SplashState> {
-  final LocalStorage localStorage;
+  SplashCubit() : super(SplashInitial());
 
-  SplashCubit(this.localStorage) : super(SplashInitial());
+  final LocalStorage localStorage = GetIt.instance<LocalStorage>();
 
   Future<void> validateSession() async {
     try {
