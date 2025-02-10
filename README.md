@@ -28,3 +28,12 @@ Application developed in Flutter with multi-user order taking and with main conf
 - bloc.
 - get_it.
 
+# Improvements
+
+It can be improved by adding: 
+- Color palette.
+- custom fonts.
+- creation of components such as buttons, texts, inputs.
+- Improve the search engine's call every time you search for a name,
+  search for it without having to call the service and then add filtering
+  and have a button that, when pressed, calls the service with the filtered data.
