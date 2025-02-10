@@ -32,11 +32,6 @@ Future<void> setup() async {
   sl.registerFactory<SplashCubit>(() => SplashCubit(
         sl(),
       ));
-  sl.registerFactory<HomeCubit>(() => HomeCubit(
-        sl(),
-        sl(),
-      ));
-  sl.registerFactory<DetailCubit>(() => DetailCubit(
-        sl(),
-      ));
+  sl.registerFactory<HomeCubit>(() => HomeCubit());
+  sl.registerFactory<DetailCubit>(() => DetailCubit());
 }

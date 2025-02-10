@@ -1,18 +1,18 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 
 import '../../../../src/src.dart';
 import 'blocs.dart';
 
 class DetailCubit extends Cubit<DetailState> {
-  DetailCubit(
-    this._toggleFavoriteUseCase,
-  ) : super(DetailInitial()) {
+  DetailCubit() : super(DetailInitial()) {
+    _toggleFavoriteUseCase = GetIt.I<ToggleFavoriteUseCase>();
     _loadFavorites();
   }
 
   List<int> _favorites = [];
   final List<Character> _characters = [];
-  final ToggleFavoriteUseCase _toggleFavoriteUseCase;
+  late final ToggleFavoriteUseCase _toggleFavoriteUseCase;
 
   void toggleFavorite(Character character) async {
     final result = await _toggleFavoriteUseCase(character, _favorites);

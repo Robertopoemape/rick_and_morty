@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 import '../../../../src/src.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(
-    this._getCharactersUseCase,
-    this._searchCharactersUseCase,
-  ) : super(HomeInitial()) {
+  HomeCubit() : super(HomeInitial()) {
+    _getCharactersUseCase = GetIt.I<GetCharactersUseCase>();
+    _searchCharactersUseCase = GetIt.I<SearchCharactersUseCase>();
     _scrollController.addListener(_onScroll);
     getCharacters();
   }
-  final GetCharactersUseCase _getCharactersUseCase;
-  final SearchCharactersUseCase _searchCharactersUseCase;
+  late final GetCharactersUseCase _getCharactersUseCase;
+  late final SearchCharactersUseCase _searchCharactersUseCase;
 
   final List<Character> _characters = [];
   String searchQuery = '';
